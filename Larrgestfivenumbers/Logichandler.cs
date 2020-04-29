@@ -13,18 +13,19 @@ namespace Largestfivenumbers
                 var parse = num.ToCharArray();
                 numbers = Array.ConvertAll(parse, c => (int)Char.GetNumericValue(c));
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-                throw;
+                throw ex;
             }
             return numbers;
         }
 
-        public int[] LargestFiveNumber(int[] list)
+        public int LargestFiveNumber(int[] list)
         {
             string numbers = "";
             int[] sorted = { };
+            string subString = string.Empty;
+            int conVertFiveDigNUmber = 9;
             try
             {
                 sorted = list.OrderByDescending(x => x).ToArray();
@@ -33,18 +34,16 @@ namespace Largestfivenumbers
                     if (!numbers.Contains(item.ToString()))
                         numbers += item.ToString();
                 }
+
+                subString = numbers.Substring(0, 5);
+                conVertFiveDigNUmber = Convert.ToInt32(subString);
+               
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-                throw;
+                throw ex;
             }
-
-            var substring = numbers.Substring(0, 5);
-            var convertToInt = Convert.ToInt32(substring);
-            int[] test = { convertToInt };
-
-            return test;
+            return conVertFiveDigNUmber;
         }
     }
 }

@@ -16,7 +16,7 @@ namespace Largestfivenumbers
                 string number = Console.ReadLine();
                 var listOfNumbers = logic.GetNumbersOneByOne(number);
                 var fiveDigitsNumber = logic.LargestFiveNumber(listOfNumbers);
-                Console.WriteLine($"Higest five digist number : {string.Join("", fiveDigitsNumber)}");
+                Console.WriteLine($" Highest five digit number : {fiveDigitsNumber}");
             }
         }
     }
