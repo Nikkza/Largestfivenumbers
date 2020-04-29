@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Largestfivenumbers
 {
@@ -13,7 +10,6 @@ namespace Largestfivenumbers
             int[] numbers = { };
             try
             {
-                List<int> list = new List<int>();
                 var parse = num.ToCharArray();
                 numbers = Array.ConvertAll(parse, c => (int)Char.GetNumericValue(c));
             }
