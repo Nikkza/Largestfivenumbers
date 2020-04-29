@@ -10,12 +10,14 @@ namespace Larrgestfivenumbers
     {
         static void Main(string[] args)
         {
-            Logichandler logic = new Logichandler();
-            string number = Console.ReadLine();
-            var listOfNumbers = logic.GetNumbersOneByOne(number);
-            var fiveDigitsNumber = logic.LargestFiveNumber(listOfNumbers);
-            Console.WriteLine($"Higest five digist number : {string.Join("",fiveDigitsNumber)}");
-            Console.ReadLine();
+            while (true)
+            {
+                Logichandler logic = new Logichandler();
+                string number = Console.ReadLine();
+                var listOfNumbers = logic.GetNumbersOneByOne(number);
+                var fiveDigitsNumber = logic.LargestFiveNumber(listOfNumbers);
+                Console.WriteLine($"Higest five digist number : {string.Join("", fiveDigitsNumber)}");
+            }
         }
     }
 }
