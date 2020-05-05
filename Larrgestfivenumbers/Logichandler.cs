@@ -25,7 +25,7 @@ namespace Largestfivenumbers
             string numbers = "";
             int[] sorted = { };
             string subString = string.Empty;
-            int conVertFiveDigNUmber = 9;
+            int conVertFiveDigNUmber = 0;
             try
             {
                 sorted = list.OrderByDescending(x => x).ToArray();
